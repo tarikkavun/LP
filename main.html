@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .body{
+          overflow: scroll;
+        }
+        .navbar {
+          position: fixed; /* Set the navbar to fixed position */
+          width: 100%; /* Full width */
+          z-index: 2;
+        }
+        .container{padding: 0px 50px;}
+        .navbar>.container{height: 72px;}
+        .navbar-brand{font-size: 20px; font-weight: 700;}
+        .fs-14{font-size: 14px;}
+        .fs-16{font-size: 16px;}
+        .navbar-toggler{padding: 12px 16px;}
+        .navbar-toggler-icon{width: 16px; height: 16px;}
+        .communicate-button{width: 90px; height: 40px; padding-top: 0;}
+        .navbar-nav {margin-left: auto;} 
+        .btn.btn-primary{height: 36px; padding: 0;}
+
+        .showcase{font-weight: 300;}
+        .sub_showcase{font-size: 20px; font-weight: 400; color: RGBA(33, 37, 41, 0.75);}
+        .section1-container{padding: 152px 48px 80px 48px;}
+        .phone-circ{ margin-top: 6em;}
+        
+        .phocir1{position: relative; width: 80%; padding-top: 80%; background-color: blue; border-radius: 1000px; margin: auto;}
+        .phone1{height: 115%; z-index: 1; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+        @media screen and (max-width: 575px){
+          .phocir1{position: relative; width: 80%; padding-top: 80%; background-color: white; border-radius: 1000px; margin: auto;}
+          .phone1{width: 160px; height: 318px;}
+          .section1-container{padding-bottom: 150px;}
+        }
+        .section2-container{background-color: #8B1FE4;}
+        .one_of_four{margin-top: 20px;}
+        .one_of_four .mt-4{font-size: 28px;}
+
+    </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm py-0 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button
+          class="navbar-toggler fs-14"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+            <div class="d-flex align-content-center">
+              <span class="f-14 me-1">Menu</span>
+              <span class="navbar-toggler-icon m-0" style="width: 15px"></span>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item align-content-center">
+              <a class="nav-link active" aria-current="page" href="#">Features</a>
+            </li>
+            <li class="nav-item align-content-center"><a class="nav-link active" href="#">Download</a></li>
+            <li>
+              <button type="button" class="btn btn-primary mt-2 mt-lg-0 ms-lg-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#modaltarget0">
+                <div class=" d-flex align-content-center px-3">
+                  <span class="my-auto me-1 py-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-text-fill me-1 mb-1" viewBox="0 0 16 16">
+                      <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M4.5 5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
+                    </svg>
+                  </span>
+                  <span class="my-auto">Send Feedback</span>
+                </div>
+              </button>
+
+
+
+
+
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <div class="modal fade" id="modaltarget0" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-light p-4" style="background-color: #8621E5;">
+          <h1 style="font-size: 20px; font-weight: 500;">Send Feedback</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="close" color="white"></button>
+        </div>
+        <form class="p-4" action="https://formspree.io/f/mrbzedrq" method="POST">
+          <input class="focus-ring p-3" placeholder="Full Name" style="width: 100%; border: 0.5px solid darkgray ;border-radius: 5px; margin-bottom: 10px;" type="text" id="fname" name="fname">
+          <input class="focus-ring p-3" placeholder="Email Address" style="width: 100%; border: 0.5px solid darkgray ;border-radius: 5px; margin-bottom: 10px;" type="email" id="mail" name="mail">
+          <input class="focus-ring p-3" placeholder="Phone Number" style="width: 100%; border: 0.5px solid darkgray ;border-radius: 5px; margin-bottom: 10px;" type="tel" id="telno" name="telno">
+          <textarea class="focus-ring p-3" placeholder="Message..." rows="4" name="message0" id="message0" style="width: 100%; border: 0.5px solid darkgray ;border-radius: 5px; margin-bottom: 10px;"></textarea>
+          <button type="submit" style="width: 100%;" class="btn btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL END -->
+
+  <div class="section1-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-content-center">
+          <h1 class="showcase text-center text-lg-start display-1">Showcase your app beautifully.</h1>
+          <p class="sub_showcase mt-3 text-center text-lg-start">Launch your mobile app landing page faster with this free, open source theme from Start Bootstrap!</p>
+            <div class="d-lg-flex text-center text-lg-start">
+              <div class="mt-3 me-lg-3 mt-lg-0">
+                <a href=""><img style="height: 48px;" src="google-play-badge.svg" alt=""></a> 
+              </div>
+              <!--GOOGLE-->
+              
+              <div class="mt-3 mt-lg-0">
+                <a class="" href="" class="ms-2"><img style="height: 48px;" src="app-store-badge.svg" alt=""></a>    <!--APPLE-->
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-6 phone-circ align-self-center mt-lg-0">
+          <div class="phocir1">
+            <!-- <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle class="circle1" style="z-index: 0;" cx="50" cy="50" r="35"></circle>
+            </svg> -->
+            <img class="phone1 mx-auto" src="phone-screen.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SECT2 END -->
+
+  <div class="section2-container py-5 text-center">
+    <div class="container">
+      <div class="h2 fs-1 text-light">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"
+      </div>
+      <img class="mt-4" src="tnw-logo.svg" style="height: 48px;" alt="">
+    </div>
+  </div>
+  <!-- SECT3 END -->
+
+  <section class="px-5" style="padding-top: 80px; padding-bottom: 100px;">
+    <div class="container mx-auto section0 row justify-content-center justify-content-lg-between">
+
+        <div class="col-xxl-4 col-xl-4  col-lg-4 phone-circ align-self-start order-1 order-lg-0">
+          <div class="phocir1">
+            <!-- <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle class="circle1" style="z-index: 0;" cx="50" cy="50" r="35"></circle>
+            </svg> -->
+            <img class="phone1 mx-auto" src="phone-screen.png" alt="">
+          </div>
+        </div>
+
+        <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 row-cols-1 col-xxl-8 col-xl-8 col-lg-8 all_fours order-0 justify-content-center align-content-center">
+
+          <div class="col one_of_four mb-3 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+              </svg> 
+            <h3 class="mt-4">Device Mockups</h3>
+            <p class="mt-3">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+          </div>
+
+          <div class="col one_of_four mb-3 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+              <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+              <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+            </svg>
+            <h3 class="mt-4">Flexible Use</h3>
+            <p class="mt-3">Put an image, video, animation, or anything else in the screen!</p>
+          </div>
+
+          <div class="col one_of_four mb-3 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-gift" viewBox="0 0 16 16">
+              <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+            <h3 class="mt-4">Free to Use</h3>
+            <p class="mt-3">As always, this theme is free to download and use for any purpose!</p>
+          </div>
+
+          <div class="col one_of_four mb-3 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64 " fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+              <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+            </svg>
+            <h3 class="mt-4">Open Source</h3>
+            <p class="mt-3">Since this theme is MIT licensed, you can use it commercially!</p>
+          </div>
+        </div>
+      </div>
+  </section> 
+  <!-- SECT-4 END -->
+ 
+ 
+  <section class="bg-light" style="padding: 80px 0px;">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <h2 class="display-4 lh-1 mb-4">Enter a new age of web design</h2>
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some
+                    information about your application, why it was built, the problem it solves, or anything else!
+                    There's plenty of space for text here, so don't worry about writing too much.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- SECT-5 END -->
+
+
+  <section class="bg-dark" style="padding: 240px 0px;">
+    <div class="content">
+        <div class="container px-5">
+            <h2 class="text-light display-1 lh-1 mb-4">
+                Stop waiting.
+                <br>
+                Start building.
+            </h2>
+            <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
+        </div>
+    </div>
+  </section>
+  <!-- SECT-6 END -->
+
+
+  <section class="bg-gradient-primary-to-secondary" style="background-color: #8621E5; padding: 80px 0px">
+    <div class="container px-5">
+        <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" style="height: 40px;" src="google-play-badge.svg" alt=""></a>
+            <a href="#!"><img class="app-badge" style="height: 40px;" src="app-store-badge.svg" alt=""></a>
+        </div>
+    </div>
+  </section>
+
+  <!-- SECT-7 END -->
+
+  <footer class="bg-black text-center py-5">
+    <div class="container px-5">
+        <div class="text-white-50 small">
+            <div class="mb-2">© Tarık KAVUN 2024. All Rights Reserved.</div>
+            <a style="text-decoration: none; color: darkgray;" href="#!">Privacy</a>
+            <span class="mx-1">·</span>
+            <a style="text-decoration: none; color: darkgray;" href="#!">Terms</a>
+            <span class="mx-1">·</span>
+            <a style="text-decoration: none; color: darkgray;" href="#!">FAQ</a>
+        </div>
+    </div>
+</footer>
+    <!-- ############################# -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
